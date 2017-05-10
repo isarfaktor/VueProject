@@ -1,6 +1,9 @@
-const gisview = require('./components/GISView.vue');
+const GISView = require('./components/GISView.vue');
+import VueResource from 'vue-resource';
 
 window.Vue = Vue;
+Vue.use(VueResource);
+
 window.Event = new class {
   constructor() {
     this.Vue = new Vue();
@@ -15,15 +18,13 @@ window.Event = new class {
   }
 };
 
-window.app = new Vue({
+var App = window.App = new Vue({
   el: '#app',
   components: {
-    gisview
+    gisview: GISView
   },
-  data: {},
   methods: {
     init: function() {
-      this.$broadcast('MapsApiLoaded');
     }
   }
 });
