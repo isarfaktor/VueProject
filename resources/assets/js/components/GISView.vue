@@ -1,16 +1,23 @@
-<template>
-    <h1>Test Header</h1>
-</template>
 <script>
     import GoogleMaps from '../mixins/GoogleMaps.js';
 
     export default {
         mixins: [GoogleMaps],
         data: {
-            test: 1
+            map: ''
         },
-        mounted() {
-            console.log("test");
+        created() {
+            this.initMap();
+        },
+        methods: {
+            initMap: function() {
+                console.log("OK");
+                this.map = new google.maps.Map(this.$refs.map), {
+                    center: { lat: 83.298, lng: 35.555},
+                    scrollwheel: false,
+                    zoom: 4
+                }
+            }
         }
     }
 </script>

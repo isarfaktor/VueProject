@@ -37,10 +37,10 @@
     <!-- End wrapper-->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.0/vue.min.js"></script>
-  <script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWZxmn3CYyhAT2vnv9tOBgQSGzrSBzCsM&libraries=places,geometry"></script>
+  <script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
   <script src="{!! asset('js/main.js') !!}" type="text/javascript"></script>
-@section('scripts')
+  @section('scripts')
 @show
 
 </body>
